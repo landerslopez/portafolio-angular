@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { InfoPaginaService } from './services/info-pagina.service';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,10 @@ import { HeaderComponent } from './shared/header/header.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  constructor(public info: InfoPaginaService){
+
+  }
+
   title = 'portafolio';
 }

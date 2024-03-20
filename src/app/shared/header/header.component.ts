@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule} from '@angular/router';
+import { InfoPaginaService } from '../../services/info-pagina.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,12 @@ import { RouterModule} from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
+
+  constructor(public paginaService: InfoPaginaService){
+
+  }
+  ngOnInit(): void {
+  }
 
 }
